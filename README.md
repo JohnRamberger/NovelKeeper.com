@@ -1,6 +1,5 @@
 # NovelKeeper.com
-Your all-in-one place to collect and read novels.
-
+### Your all-in-one place to collect and read novels.
 NovelKeeper is the ultimate library for online novels. Simply add a novel and start reading.
  
 Novelkeeper.com uses backend PHP to scrape novel content from other novel sites, while using JS to conveniently organize and display allb your novels in one place. 
