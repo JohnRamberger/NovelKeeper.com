@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' >
+    <meta name="description" content="NovelKeeper is the ultimate library for online novels. Simply add a novel and start reading." />
+    
+    <meta name="twitter:title" content="NovelKeeper.com">
+    <meta name="twitter:description" content="NovelKeeper is the ultimate library for online novels. Simply add a novel and start reading.">
+    <meta name="twitter:site" content="@JRamberger">
+    <meta name="twitter:creator" content="@JRamberger">
+
+    <meta property="og:type" content="library" />
+    <meta property="og:title" content="NovelKeeper.com" />
+    <meta property="og:description" content="NovelKeeper is the ultimate library for online novels. Simply add a novel and start reading." />
+    <meta property="og:url" content="https://www.NovelKeeper.com" />
+    <meta property="og:site_name" content="NovelKeeper" />
+
+    <meta name="google-signin-client_id" content="379515550700-snr2qgaikmu3bgfo3a6dsrvmk9uitiv4.apps.googleusercontent.com">
+    <title>Library</title>
+
+    <!--load all stylesheets-->
+    <link rel="stylesheet" type="text/css" href="css/logo.css">
+    <link rel="stylesheet"  type="text/css"  href="css/library.css">
+    <link rel="stylesheet" type="text/css" href="css/notifications.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/loader.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,500,600,700" data-ignore="true">
+    <link data-ignore="true" href="https://fonts.googleapis.com/css?family=Merriweather:700,400,400i" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <span id="login" data-type="cover">
+        <h2 class="minor">You must be logged in to use this page.</h2>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </span>
+    <span id="login-bg"></span>
+
+    <!--header-->
+
+    <div id="nav">
+        <a class="nav-logo-library" href="/">
+            <svg
+                xmlns="http://www.w3.org/2000/svg" width="296.71" height="148" viewBox="0 0 296.71 148">
+                <polygon points="0.5 70.5 0.5 147.5 77.5 147.5 0.5 70.5" fill="currentColor"/>
+                <polygon points="109.21 146.5 1 38.29 1 1 39.29 1 147 108.71 147 146.5 109.21 146.5" fill="currentColor"/>
+                <!--<path d="M587.09,284.5,694.5,391.91V429H657.41L549.5,321.09V284.5h37.59m.41-1h-39v38L657,430h38.5V391.5l-108-108Z" transform="translate(-548 -283)"/>-->
+                <path d="M695.5,283.5h-74l147,147h74l-73-73,74-74h-76l-36,36Z" transform="translate(-548 -283)" fill="currentColor"/>
+            </svg>
+        </a>
+        <h1 class="major">Library</h1>
+        <div class="user-block">
+            <span class="user">...</span>
+            <span class="user-container">
+                <a class="but" href="addnovel">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/></svg>
+                    add novel</a>
+                <a class="but" href="#" onclick="signOut_all();window.location.reload();">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M14 12h-4v-12h4v12zm4.213-10.246l-1.213 1.599c2.984 1.732 5 4.955 5 8.647 0 5.514-4.486 10-10 10s-10-4.486-10-10c0-3.692 2.016-6.915 5-8.647l-1.213-1.599c-3.465 2.103-5.787 5.897-5.787 10.246 0 6.627 5.373 12 12 12s12-5.373 12-12c0-4.349-2.322-8.143-5.787-10.246z"/></svg>
+                    signout</a>
+            </span>
+        </div>
+    </div>
+
+    <!--<h1 class="major">Library</h1>-->
+
+    <!--end header-->
+
+    <span id="loading-info">
+        <h3 class="minor">Loading...</h3>
+        <div class="loadingio-eclipse loader">
+            <div class="ldio-rpinwye8j0b">
+                <div>
+                </div>
+            </div>
+        </div>
+    </span>
+
+    <div id="novel-context-menu" data-nuid="">
+        <span class="header">novel title</span>
+        <a class="but remove">remove from library</a>
+        <a class="but details" href="#">view details</a>
+        <a class="but open" href="#">open in reader</a>
+        <a class="but download" href="#">download</a>
+        <a class="but openorign" href="#" target="_blank">open novel from source</a>
+        <a class="but openorigc" href="#" target="_blank">open chapter from source</a>
+    </div>
+
+    <div id="confirm" class="draggable" data-nuid="" data-nu="">
+        <!--<span class="header"></span>-->
+        <span class="desc">are you sure you would like to remove the following novel from your library?<br><span class="novel-title">novel title</span></span>
+        <!--<span class="reproduce">confirm</span>-->
+        <span class="bg">
+            <input type="text" placeholder="remove novel">
+        </span>
+        <a class="confirm">confirm</a>
+        <a class="cancel enabled">cancel</a>
+    </div>
+    
+
+    <div id="wrapper" class="unfocus">
+        <!--<div id="but-div">
+            <div id="buttons">
+                <a id="add-novel-button" class="font1" href="addnovel">
+                    <span class="add">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/></svg>
+                        <span class="text">
+                            ADD NOVEL
+                        </span>
+                    </span>
+                </a>
+                <a id="signout-button" class="font1" href="#" onclick="signOut_all();window.location.reload();">
+                    <span class="add">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M14 12h-4v-12h4v12zm4.213-10.246l-1.213 1.599c2.984 1.732 5 4.955 5 8.647 0 5.514-4.486 10-10 10s-10-4.486-10-10c0-3.692 2.016-6.915 5-8.647l-1.213-1.599c-3.465 2.103-5.787 5.897-5.787 10.246 0 6.627 5.373 12 12 12s12-5.373 12-12c0-4.349-2.322-8.143-5.787-10.246z"/></svg>
+                        <span class="text">
+                            SIGNOUT
+                        </span>
+                    </span>
+                </a>
+            </div>
+        </div>-->
+
+        <div id="library" class="unfocus">
+            <div class="sorting">
+                <span class="display" data-val="0">
+                    <svg class="svg-asc" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-up" class="svg-inline--fa fa-arrow-up fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>
+                    <span class="text">last read</span>
+                </span>
+                <span class="options">
+                    <span class="sort" data-val="0">
+                        <svg class="svg-asc" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-up" class="svg-inline--fa fa-arrow-up fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>
+                        <span class="text">last read</span>
+                    </span>
+                    <span class="sort" data-val="1">
+                        <svg class="svg-asc" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-up" class="svg-inline--fa fa-arrow-up fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>
+                        <span class="text">title</span>
+                    </span>
+                    <span class="sort" data-val="2">
+                        <svg class="svg-asc" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-up" class="svg-inline--fa fa-arrow-up fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>
+                        <span class="text">progress</span>
+                    </span>
+                </span>
+            </div>
+            <!--all novel links go here-->
+
+            <h3 class="empty">There's nothing here.</h3>
+        </div>
+    </div>
+
+    <!--load all scripts-->
+    <script src="js/000webhost.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+    integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script src="js/cookies.js"></script>
+    <script src="js/notification_manager.js"></script>
+    <script src="js/AJAX.js"></script>
+    <script src="js/user_data.js"></script>
+    <script src="js/login_onload.js"></script>
+    <script src="js/grabber.js"></script>
+    <script src="js/library_onload.js"></script>
+</body>
+</html>

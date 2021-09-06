@@ -1,0 +1,91 @@
+@-webkit-keyframes ldio-rpinwye8j0b {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes ldio-rpinwye8j0b {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.ldio-rpinwye8j0b div {
+  position: absolute;
+  -webkit-animation: ldio-rpinwye8j0b 1s linear infinite;
+          animation: ldio-rpinwye8j0b 1s linear infinite;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 4px 0 0 #5a196b;
+          box-shadow: 0 4px 0 0 #5a196b;
+  -webkit-transform-origin: 32px 32.8px;
+          transform-origin: 32px 32.8px;
+}
+
+.loadingio-eclipse {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+}
+
+.ldio-rpinwye8j0b {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform: translateZ(0) scale(1);
+          transform: translateZ(0) scale(1);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  /* see note above */
+}
+
+.ldio-rpinwye8j0b div {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+/*
+<div class="loadingio-eclipse loader">
+    <div class="ldio-rpinwye8j0b">
+        <div>
+        </div>
+    </div>
+</div>
+*/
+/*
+.loader{
+    //x2
+    height: 160px;
+    width: 160px;
+    .ldio-rpinwye8j0b div{
+        //x2
+        transform-origin: 64px 65.6px;
+    }
+}
+*/
+/*# sourceMappingURL=loader.css.map */

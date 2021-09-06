@@ -1,0 +1,217 @@
+.nav-logo-reader {
+  height: 32px;
+  width: 32px;
+  margin-right: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #1f2129;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  background: -webkit-gradient(linear, left top, right top, from(#5a196b), to(#771e8f));
+  background: linear-gradient(to right, #5a196b, #771e8f);
+  float: left;
+  line-height: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.nav-logo-reader svg {
+  height: 26px;
+  width: 26px;
+  color: inherit;
+  margin: 3px;
+}
+
+.nav-logo-reader:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+.nav-logo-library {
+  height: 36px;
+  width: 36px;
+  margin-right: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #1f2129;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  background: -webkit-gradient(linear, left top, right top, from(#5a196b), to(#771e8f));
+  background: linear-gradient(to right, #5a196b, #771e8f);
+  float: left;
+  line-height: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  margin: 6px;
+}
+
+.nav-logo-library svg {
+  height: 28px;
+  width: 28px;
+  color: inherit;
+  margin: 4px;
+}
+
+.nav-logo-library:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+.nav-logo-addnovel {
+  height: 36px;
+  width: 36px;
+  margin-right: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #1f2129;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  background: -webkit-gradient(linear, left top, right top, from(#5a196b), to(#771e8f));
+  background: linear-gradient(to right, #5a196b, #771e8f);
+  float: left;
+  line-height: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  margin: 6px;
+}
+
+.nav-logo-addnovel svg {
+  height: 28px;
+  width: 28px;
+  color: inherit;
+  margin: 4px;
+}
+
+.nav-logo-addnovel:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+.nav-logo-download {
+  height: 36px;
+  width: 36px;
+  margin-right: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  background: -webkit-gradient(linear, left top, right top, from(#5a196b), to(#771e8f));
+  background: linear-gradient(to right, #5a196b, #771e8f);
+  float: left;
+  line-height: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  margin: 6px;
+}
+
+.nav-logo-download svg {
+  height: 28px;
+  width: 28px;
+  color: inherit;
+  margin: 4px;
+}
+
+.nav-logo-download:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+.nav-logo {
+  height: 56px;
+  width: 56px;
+  margin-right: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  float: left;
+  line-height: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nav-logo svg {
+  height: 100%;
+  width: 100%;
+  color: inherit;
+  pointer-events: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.nav-logo:hover svg {
+  color: #771e8f;
+}
+
+.main-wrapper-logo {
+  margin: 10px;
+  height: 56px;
+  width: 56px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  float: left;
+  line-height: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-wrapper-logo svg {
+  height: 100%;
+  width: 100%;
+  color: inherit;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.main-wrapper-logo:hover svg {
+  color: #5a196b;
+}
+
+.light-mode .nav-logo-reader {
+  color: #fff !important;
+}
+
+/*
+
+<a class="nav-logo" href="/">
+    <svg
+        xmlns="http://www.w3.org/2000/svg" width="296.71" height="148" viewBox="0 0 296.71 148">
+        <polygon points="0.5 70.5 0.5 147.5 77.5 147.5 0.5 70.5" fill="currentColor"/>
+        <polygon points="109.21 146.5 1 38.29 1 1 39.29 1 147 108.71 147 146.5 109.21 146.5" fill="currentColor"/>
+        <path d="M587.09,284.5,694.5,391.91V429H657.41L549.5,321.09V284.5h37.59m.41-1h-39v38L657,430h38.5V391.5l-108-108Z" transform="translate(-548 -283)"/>
+        <path d="M695.5,283.5h-74l147,147h74l-73-73,74-74h-76l-36,36Z" transform="translate(-548 -283)" fill="currentColor"/>
+    </svg>
+</a>
+
+
+
+
+
+
+
+*/
+/*# sourceMappingURL=logo.css.map */

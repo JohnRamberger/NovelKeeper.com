@@ -1,0 +1,223 @@
+//green
+//$theme: #27ae60;
+//$theme-secondary:#2ecc71;
+//purple
+//$theme: #3742fa;
+//$theme-secondary:#5352ed;
+//purple2
+$theme: #5a196b;//#4c175a;
+$theme-secondary:#771e8f;
+//pink
+//$theme:#e84393;
+//$theme-secondary:#fd79a8;
+//red
+//$theme:#ff4757;
+//$theme-secondary:#ff6b81;
+//default blue
+//$theme: #4c5fe2;
+//$theme-secondary:#5757e0;
+
+.nav-logo-reader{
+    height: 32px;
+    width:32px;
+    margin-right:8px;
+    cursor: pointer;
+    text-decoration: none;
+    color:#1f2129;
+    transition: color 0.3s ease;
+    background:linear-gradient(to right, $theme, $theme-secondary);
+    //background-color:#fff;
+    float: left;
+    line-height: 20px;
+    //border: 1px solid red;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    svg{
+        height: 26px;
+        width:26px;
+        color:inherit;
+        margin: 3px;
+    }
+    &:hover{
+        filter:brightness(0.8);
+        //color:rgb(73, 73, 73);
+    }
+}
+.nav-logo-library{
+    height: 36px;
+    width:36px;
+    margin-right:8px;
+    cursor: pointer;
+    text-decoration: none;
+    color:#1f2129;
+    transition: color 0.3s ease;
+    background:linear-gradient(to right, $theme, $theme-secondary);
+    //background-color:#fff;
+    float: left;
+    line-height: 20px;
+    //border: 1px solid red;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    margin: 6px;
+    svg{
+        height: 28px;
+        width:28px;
+        color:inherit;
+        margin: 4px;
+    }
+    &:hover{
+        filter:brightness(0.8);
+        //color:rgb(73, 73, 73);
+    }
+}
+.nav-logo-addnovel{
+    height: 36px;
+    width:36px;
+    margin-right:8px;
+    cursor: pointer;
+    text-decoration: none;
+    color:#1f2129;
+    transition: color 0.3s ease;
+    background:linear-gradient(to right, $theme, $theme-secondary);
+    //background-color:#fff;
+    float: left;
+    line-height: 20px;
+    //border: 1px solid red;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    margin: 6px;
+    svg{
+        height: 28px;
+        width:28px;
+        color:inherit;
+        margin: 4px;
+    }
+    &:hover{
+        filter:brightness(0.8);
+        //color:rgb(73, 73, 73);
+    }   
+}
+.nav-logo-download{
+    height: 36px;
+    width:36px;
+    margin-right:8px;
+    cursor: pointer;
+    text-decoration: none;
+    color:#fff;
+    transition: color 0.3s ease;
+    background:linear-gradient(to right, $theme, $theme-secondary);
+    //background-color:#fff;
+    float: left;
+    line-height: 20px;
+    //border: 1px solid red;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    margin: 6px;
+    svg{
+        height: 28px;
+        width:28px;
+        color:inherit;
+        margin: 4px;
+    }
+    &:hover{
+        filter:brightness(0.8);
+        //color:rgb(73, 73, 73);
+    }
+}
+.nav-logo{
+    height: 56px;
+    width:56px;
+    margin-right:8px;
+    cursor: pointer;
+    text-decoration: none;
+    color:inherit;
+    //background:linear-gradient(to right, $theme, $theme-secondary);
+    //border:1px solid #000;
+    //background-color:#fff;
+    float: left;
+    line-height: 20px;
+    //border: 1px solid red;
+    box-sizing: border-box;
+    border-radius: 4px;
+    //transition: 0.3s ease;
+    position: absolute;
+    top: 0;
+    left:0;
+    svg{
+        height: 100%;
+        width:100%;
+        color:inherit;
+        //margin: 2px;
+        pointer-events: none;
+        transition: color 0.3s ease;
+    }
+    &:hover{
+        svg{
+            color: $theme-secondary;
+        }
+        //color:rgb(73, 73, 73);
+    }
+}
+.main-wrapper-logo{
+    margin: 10px;
+    height: 56px;
+    width:56px;
+    //margin-right:8px;
+    cursor: pointer;
+    text-decoration: none;
+    color:inherit;
+    //background:linear-gradient(to right, $theme, $theme-secondary);
+    //border:1px solid #000;
+    //background-color:#fff;
+    float: left;
+    line-height: 20px;
+    //border: 1px solid red;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    position: absolute;
+    top: 0;
+    left:0;
+    svg{
+        height: 100%;
+        width:100%;
+        color:inherit;
+        //margin: 2px;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+    &:hover{
+        svg{
+            color: $theme;
+        }
+        //color:rgb(73, 73, 73);
+    }
+}
+.light-mode{
+    .nav-logo-reader{
+        color: #fff !important;
+    }
+}
+/*
+
+<a class="nav-logo" href="/">
+    <svg
+        xmlns="http://www.w3.org/2000/svg" width="296.71" height="148" viewBox="0 0 296.71 148">
+        <polygon points="0.5 70.5 0.5 147.5 77.5 147.5 0.5 70.5" fill="currentColor"/>
+        <polygon points="109.21 146.5 1 38.29 1 1 39.29 1 147 108.71 147 146.5 109.21 146.5" fill="currentColor"/>
+        <path d="M587.09,284.5,694.5,391.91V429H657.41L549.5,321.09V284.5h37.59m.41-1h-39v38L657,430h38.5V391.5l-108-108Z" transform="translate(-548 -283)"/>
+        <path d="M695.5,283.5h-74l147,147h74l-73-73,74-74h-76l-36,36Z" transform="translate(-548 -283)" fill="currentColor"/>
+    </svg>
+</a>
+
+
+
+
+
+
+
+*/

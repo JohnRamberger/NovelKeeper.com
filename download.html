@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' >
+    <meta name="description" content="NovelKeeper is the ultimate library for online novels. Simply add a novel and start reading." />
+    
+    <meta name="twitter:title" content="NovelKeeper.com">
+    <meta name="twitter:description" content="NovelKeeper is the ultimate library for online novels. Simply add a novel and start reading.">
+    <meta name="twitter:site" content="@JRamberger">
+    <meta name="twitter:creator" content="@JRamberger">
+
+    <meta property="og:type" content="library" />
+    <meta property="og:title" content="NovelKeeper.com" />
+    <meta property="og:description" content="NovelKeeper is the ultimate library for online novels. Simply add a novel and start reading." />
+    <meta property="og:url" content="https://www.NovelKeeper.com" />
+    <meta property="og:site_name" content="NovelKeeper" />
+
+    <meta name="google-signin-client_id" content="379515550700-snr2qgaikmu3bgfo3a6dsrvmk9uitiv4.apps.googleusercontent.com">
+    <title>Download</title>
+
+    <!--load all stylesheets-->
+
+    <link rel="stylesheet" type="text/css" href="css/logo.css">
+    <link rel="stylesheet" type="text/css" href="css/notifications.css">
+    <link rel="stylesheet" type="text/css" href="css/loader.css">
+    <link rel="stylesheet" type="text/css" href="css/download.css">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,500,600,700" data-ignore="true">
+    <link data-ignore="true" href="https://fonts.googleapis.com/css?family=Merriweather:700,400,400i" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!--header-->
+
+    <div id="nav">
+        <a class="nav-logo-download" href="/">
+            <svg
+                xmlns="http://www.w3.org/2000/svg" width="296.71" height="148" viewBox="0 0 296.71 148">
+                <polygon points="0.5 70.5 0.5 147.5 77.5 147.5 0.5 70.5" fill="currentColor"/>
+                <polygon points="109.21 146.5 1 38.29 1 1 39.29 1 147 108.71 147 146.5 109.21 146.5" fill="currentColor"/>
+                <!--<path d="M587.09,284.5,694.5,391.91V429H657.41L549.5,321.09V284.5h37.59m.41-1h-39v38L657,430h38.5V391.5l-108-108Z" transform="translate(-548 -283)"/>-->
+                <path d="M695.5,283.5h-74l147,147h74l-73-73,74-74h-76l-36,36Z" transform="translate(-548 -283)" fill="currentColor"/>
+            </svg>
+        </a>
+        <h1 class="major">Download</h1>
+
+        <a class="library" href="library">library</a>
+    </div>
+
+    <!--<h1 class="major">Library</h1>-->
+
+    <!--end header-->
+
+    <span id="loading-info">
+        <h3 class="minor">Loading...</h3>
+        <div class="loadingio-eclipse loader">
+            <div class="ldio-rpinwye8j0b">
+                <div>
+                </div>
+            </div>
+        </div>
+    </span>
+    
+
+    <div id="wrapper">
+        <div class="panel draggable">
+            <!--<h3 class="minor">Generating epub file...</h3>-->
+            <span class="settings">
+                <span class="slider-desc">chapter range: <input type="number" class="first"> - <input type="number" class="last"></span>
+                <div id="slider-range" class=""></div>
+                <button class="start" onclick="checkslider();">start</button>
+            </span>
+            
+            <h4 class="time-left" data-time-left="9999999999">approx. time left: </h4>
+            <h4 class="time-left-desc">estimated on-the-fly. compiling time may take up to tens of minutes additionally depending on chapter download count.</h4>
+            <span class="progress-bar">
+                <span class="fill"></span>
+            </span>
+            <span class="console" spellcheck="false" contenteditable="false"></span>
+            <a class="but " target="_blank">Download</a>
+        </div>
+    </div>
+
+    <!--load all scripts-->
+    <script src="js/000webhost.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+    integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script src="js/cookies.js"></script>
+    <script src="js/notification_manager.js"></script>
+    <script src="js/AJAX.js"></script>
+    <script src="js/user_data.js"></script>
+    <script src="js/grabber.js"></script>
+    <script src="js/download_onload.js"></script>
+</body>
+</html>

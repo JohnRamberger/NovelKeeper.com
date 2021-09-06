@@ -1,0 +1,1400 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #1f2129;
+  height: 100%;
+  display: block;
+}
+
+#nav {
+  height: 48px;
+  background-color: #1f2129;
+  color: #1f2129;
+  width: 100vw;
+  position: fixed;
+  z-index: 10000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid #3c3e47;
+  top: 0;
+  left: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#nav .major {
+  font-size: 1.6em;
+  position: relative;
+  text-align: left;
+  float: left;
+  color: #fff;
+  font-family: inherit;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  display: block;
+  font-weight: 300;
+  margin: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+#nav .library {
+  font-size: 18px;
+  text-decoration: none;
+  float: right;
+  color: #fff;
+  font-family: inherit;
+  padding: 11px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+}
+
+#nav .library:hover {
+  background-color: #262831;
+}
+
+#nav .restart {
+  font-size: 18px;
+  text-decoration: none;
+  float: right;
+  color: #fff;
+  font-family: inherit;
+  padding: 11px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+}
+
+#nav .restart:hover {
+  background-color: #262831;
+}
+
+#load-time {
+  color: #a0a3aa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  display: block;
+  position: fixed;
+  width: 200px;
+  text-align: right;
+  top: 148px;
+  left: -92px;
+  opacity: 0;
+}
+
+/*.major{
+    font-size: 8vw;
+    width: 60%;
+    position: fixed;
+    left:20%;
+    top: 200px;
+    text-align: center;
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+    pointer-events: none;
+}*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  box-shadow: 0 0 0px 1000px #000 inset;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#url-input {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 200px);
+  width: 400px;
+  -webkit-transition: left 0.4s ease, width 0.4s ease, top 1s ease;
+  transition: left 0.4s ease, width 0.4s ease, top 1s ease;
+  z-index: 30;
+}
+
+#url-input:focus-within {
+  left: calc(50% - 30%);
+  width: 60%;
+}
+
+#url-input input {
+  width: calc(100% - 5px - 40px);
+  padding-right: 40px;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  direction: ltr;
+}
+
+#url-input input:placeholder-shown ~ .nk-button {
+  color: #3c3e47;
+  cursor: no-drop;
+}
+
+#url-input input:placeholder-shown ~ .nk-button:hover {
+  right: 0;
+}
+
+#url-input .nk-button {
+  margin: 8px 0 4px 0;
+  height: calc(60% - 2px);
+  width: 40px;
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  color: #5a196b;
+  cursor: pointer;
+  -webkit-transition: right 0.2s ease, opacity 0.5s ease;
+  transition: right 0.2s ease, opacity 0.5s ease;
+  opacity: 1;
+}
+
+#url-input .nk-button:hover {
+  right: -5px;
+}
+
+#url-input .nk-button svg {
+  color: inherit;
+  width: 100%;
+}
+
+._done {
+  left: calc(50% - 30%) !important;
+  width: 60% !important;
+  z-index: 5 !important;
+}
+
+._done input {
+  width: calc(100% - 10px) !important;
+  padding-right: 5px !important;
+}
+
+._done .nk-button {
+  opacity: 0 !important;
+}
+
+.nk-input {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nk-input input {
+  font-family: inherit;
+  border: 0;
+  border-bottom: 2px solid #3c3e47;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0px;
+  background: transparent;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+  display: inline-block;
+  width: calc(100% - 10px);
+}
+
+.nk-input input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.nk-input input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.nk-input input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.nk-input input::placeholder {
+  color: transparent;
+}
+
+.nk-input input:placeholder-shown ~ .nk-placeholder {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 12px;
+  left: 10px;
+  font-weight: 400;
+}
+
+.nk-input input:focus {
+  padding-bottom: 6px;
+  font-weight: 500;
+  border-width: 3px;
+  -o-border-image: linear-gradient(to right, #5a196b, #771e8f);
+     border-image: -webkit-gradient(linear, left top, right top, from(#5a196b), to(#771e8f));
+     border-image: linear-gradient(to right, #5a196b, #771e8f);
+  border-image-slice: 1;
+}
+
+.nk-input input:focus ~ .nk-placeholder {
+  position: absolute;
+  top: -16px;
+  left: 0px;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #5a196b;
+  font-weight: 700;
+}
+
+.nk-input .nk-placeholder {
+  position: absolute;
+  top: -16px;
+  left: 0px;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 1.1rem;
+  color: #3c3e47;
+  font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#loading-info {
+  position: absolute;
+  width: 500px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: calc(50% - 100px);
+  left: calc(50% - 250px);
+  display: none;
+  z-index: 15;
+}
+
+#loading-info .minor {
+  text-align: center;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: block;
+  position: relative;
+}
+
+#loading-info .loader {
+  height: 160px;
+  width: 160px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+#loading-info .loader .ldio-rpinwye8j0b div {
+  -webkit-transform-origin: 64px 65.6px;
+          transform-origin: 64px 65.6px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#library-buttons {
+  margin: 0 auto;
+  margin-top: calc(200px - 48px);
+  display: block;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  opacity: 0;
+}
+
+#library-buttons #library-button {
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 100px;
+  text-align: center;
+  display: inline-block;
+  min-width: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 7px 16px;
+  line-height: 16px;
+  height: calc(32px - 14px);
+  background: -webkit-gradient(linear, left top, right top, from(#5a196b), to(#771e8f));
+  background: linear-gradient(to right, #5a196b, #771e8f);
+  color: #fff;
+  overflow: hidden;
+  cursor: wait;
+  pointer-events: auto;
+  -webkit-transition: top 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: top 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, top 0.3s ease;
+  transition: box-shadow 0.3s ease, top 0.3s ease, -webkit-box-shadow 0.3s ease;
+  z-index: 5;
+  margin-right: 3em;
+  font-size: 12px;
+}
+
+#library-buttons #library-button:hover {
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.3);
+          box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.3);
+}
+
+#library-buttons #library-button .add, #library-buttons #library-button .remove {
+  display: block;
+  line-height: 16px;
+  text-align: center;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+#library-buttons #library-button .add svg, #library-buttons #library-button .remove svg {
+  color: inherit;
+  height: 12px;
+  width: 12px;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+#library-buttons #library-button .add .text, #library-buttons #library-button .remove .text {
+  font-size: 12px;
+  vertical-align: middle;
+  margin-left: 4px;
+  line-height: 16px;
+  color: inherit;
+}
+
+#library-buttons #library-button .remove {
+  display: none;
+}
+
+#library-buttons #navigate-library {
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 100px;
+  text-align: center;
+  display: inline-block;
+  min-width: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 7px 16px;
+  line-height: 16px;
+  height: calc(32px - 14px);
+  background: -webkit-gradient(linear, left top, right top, from(#5a196b), to(#771e8f));
+  background: linear-gradient(to right, #5a196b, #771e8f);
+  color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  pointer-events: auto;
+  -webkit-transition: top 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: top 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, top 0.3s ease;
+  transition: box-shadow 0.3s ease, top 0.3s ease, -webkit-box-shadow 0.3s ease;
+  z-index: 5;
+  font-size: 12px;
+}
+
+#library-buttons #navigate-library:hover {
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.3);
+          box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.3);
+}
+
+#library-buttons #navigate-library .add, #library-buttons #navigate-library .remove {
+  display: block;
+  line-height: 16px;
+  text-align: center;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+#library-buttons #navigate-library .add svg, #library-buttons #navigate-library .remove svg {
+  color: inherit;
+  height: 12px;
+  width: 12px;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+#library-buttons #navigate-library .add .text, #library-buttons #navigate-library .remove .text {
+  font-size: 12px;
+  vertical-align: middle;
+  margin-left: 4px;
+  line-height: 16px;
+  color: inherit;
+}
+
+._off {
+  visibility: hidden !important;
+}
+
+#wrapper {
+  height: calc(100% - 48px);
+  width: 100%;
+  padding-right: 20px;
+  display: block;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  z-index: 10;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 16px;
+}
+
+#wrapper .notif {
+  position: absolute;
+  width: 360px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: -300px;
+  -webkit-transition: top 1s ease;
+  transition: top 1s ease;
+  left: calc(50% - 180px);
+  z-index: 9999;
+  color: #fff;
+  background-color: #166ad8;
+  border: 1px solid #134586;
+  border-radius: 5px;
+  padding: 8px 10px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+#wrapper .notif.success {
+  background-color: #20c364;
+  border: 1px solid #10753a;
+}
+
+#wrapper .notif.error {
+  background-color: #db1a1a;
+  border: 1px solid #7c1010;
+}
+
+#wrapper .actions {
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  right: 1em;
+  top: 0.5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: inherit;
+  z-index: 1000;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: auto;
+  cursor: pointer;
+  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 100%;
+}
+
+#wrapper .actions .display {
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  display: block;
+  border-radius: 100%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  color: inherit;
+  text-align: right;
+  padding: 18px 0;
+  line-height: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid rgba(172, 172, 172, 0.3);
+}
+
+#wrapper .actions .display svg {
+  height: 50%;
+  width: 50%;
+  color: inherit;
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+}
+
+#wrapper .actions .display:hover {
+  border: 1px solid rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.4), -3px -3px 6px 0 rgba(207, 207, 207, 0.4);
+          box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.4), -3px -3px 6px 0 rgba(207, 207, 207, 0.4);
+}
+
+#wrapper .actions .options {
+  position: absolute;
+  display: none;
+  height: 400%;
+  width: 300%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  -webkit-box-shadow: 7px 7px 14px #c9c9c9, -5px -5px 10px #ffffff;
+          box-shadow: 7px 7px 14px #c9c9c9, -5px -5px 10px #ffffff;
+  top: -2px;
+  right: -2px;
+}
+
+#wrapper .actions .options a {
+  text-decoration: none;
+}
+
+#wrapper .actions .options .but {
+  height: 25%;
+  width: 100%;
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid rgba(60, 62, 71, 0.5);
+  color: inherit;
+  color: inherit;
+  text-align: center;
+  padding: 1.4em 0;
+  line-height: 100%;
+  font-size: 0.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+#wrapper .actions .options .but:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#wrapper .actions .options .but:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+#wrapper .actions .options .but svg {
+  height: 160%;
+  color: inherit;
+  display: block;
+  float: right;
+  margin: 0 20px 0 15px;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  opacity: 0;
+}
+
+#wrapper .actions .options .but:last-child {
+  border-bottom: none;
+}
+
+#wrapper #read-button {
+  pointer-events: auto;
+  position: fixed;
+  width: 30%;
+  left: calc(50% - 15%);
+  bottom: -3.7em;
+  height: 3.5em;
+  border-radius: 3em;
+  background: -webkit-gradient(linear, left top, right top, from(#5a196b), to(#771e8f));
+  background: linear-gradient(to right, #5a196b, #771e8f);
+  cursor: pointer;
+  -webkit-transition: bottom 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: bottom 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: bottom 0.3s ease, box-shadow 0.3s ease;
+  transition: bottom 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+  z-index: 100;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: table;
+  text-decoration: none;
+}
+
+#wrapper #read-button:hover {
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(90, 25, 107, 0.7);
+          box-shadow: 0px 0px 6px 3px rgba(90, 25, 107, 0.7);
+}
+
+#wrapper #read-button h2 {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#wrapper #novel-info {
+  pointer-events: auto;
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  min-height: calc(100% - 24px);
+  top: calc(100vh + 10px);
+  margin: 0 auto;
+  border-radius: 30px 30px 0 0;
+  background-color: #fff;
+  display: block;
+  z-index: 50;
+  font-size: 32px;
+}
+
+#wrapper #novel-info .content {
+  height: calc(100% - 1em);
+  width: 100%;
+  padding-top: 1em;
+}
+
+#wrapper #novel-info .content #add-to-library {
+  text-decoration: none;
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  border-radius: 100px;
+  background: -webkit-gradient(linear, left top, right top, from(#5a196b), to(#771e8f));
+  background: linear-gradient(to right, #5a196b, #771e8f);
+  z-index: 100;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  right: 1em;
+}
+
+#wrapper #novel-info .content #add-to-library svg {
+  color: #fff;
+  height: 1em;
+  width: 1em;
+  margin: 0.5em;
+}
+
+#wrapper #novel-info .content .header {
+  margin: 1em;
+  margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  word-break: break-word;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.05);
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+#wrapper #novel-info .content .header #novel-cover {
+  width: 5.5em;
+  height: 7.3125em;
+  background: #f6f7fc;
+  position: relative;
+  display: block;
+}
+
+#wrapper #novel-info .content .header #novel-cover img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: transparent;
+}
+
+#wrapper #novel-info .content .header .header-right {
+  margin-left: 1em;
+  margin-right: 3em;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  display: block;
+  line-height: 1.5;
+  overflow: hidden;
+  max-height: 7.3125em;
+}
+
+#wrapper #novel-info .content .header .header-right #novel-title {
+  font-size: 0.8em;
+  margin: 0.25em 0;
+  line-height: 1.25em;
+  font-weight: 500;
+}
+
+#wrapper #novel-info .content .header .header-right #novel-author {
+  color: #771e8f;
+  font-size: 0.7em;
+  line-height: 1em;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+
+#wrapper #novel-info .content .header .header-right #novel-chapter-count {
+  color: #141212;
+  margin-bottom: 0.45em;
+  line-height: 1.25em;
+  font-size: 0.7em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 300;
+  display: block;
+}
+
+#wrapper #novel-info .content .header .header-right #novel-chapter-count #novel-missing-chaps {
+  position: relative;
+  display: none;
+  height: 12px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 12px;
+  border-radius: 100%;
+  background-color: #5a196b;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  padding: 0 5px;
+  margin-left: 6px;
+  vertical-align: middle;
+  margin-top: 0;
+  font-weight: 500;
+  line-height: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: help;
+  overflow: visible;
+}
+
+#wrapper #novel-info .content .header .header-right #novel-chapter-count #novel-missing-chaps._visible {
+  display: inline;
+}
+
+#wrapper #novel-info .content .header .header-right #novel-chapter-count #novel-missing-chaps:hover::after {
+  visibility: visible;
+}
+
+#wrapper #novel-info .content .header .header-right #novel-chapter-count #novel-missing-chaps::after {
+  content: "providers that load their pages through scripts have limited chapters available.";
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 200px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  background-color: #1f2129;
+  border: 1px solid #3d3d3d;
+  position: absolute;
+  display: block;
+  right: calc(-200px - 10px);
+  bottom: 0;
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow-x: hidden;
+  visibility: hidden;
+}
+
+#wrapper #novel-info .content .header .header-right #novel-tags h3 {
+  margin-bottom: 0.25em;
+  line-height: 1.25em;
+  font-size: 0.7em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  display: block;
+}
+
+#wrapper #novel-info .content .header .header-right #novel-tags span {
+  font-size: 0.6em;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  color: #771e8f;
+}
+
+#wrapper #novel-info .content #novel-summary {
+  margin: 1em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  margin-top: 0;
+  display: block;
+  border-bottom: 1px solid rgba(18, 18, 23, 0.1);
+}
+
+#wrapper #novel-info .content #novel-summary h3 {
+  font-weight: 500;
+  line-height: 1.25em;
+  font-size: 0.7em;
+  margin-bottom: 0.6em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#wrapper #novel-info .content #novel-summary div {
+  font-size: .6em;
+  line-height: 1.25em;
+  white-space: pre-line;
+  position: relative;
+  color: rgba(18, 18, 23, 0.6) !important;
+  display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Roboto, system-ui, —apple-system, "Segoe UI", Emoji, Helvetica, Arial, sans-serif;
+}
+
+#wrapper #novel-info .content #novel-summary div * {
+  display: none;
+}
+
+#wrapper #novel-info .content #novel-summary div p, #wrapper #novel-info .content #novel-summary div h1, #wrapper #novel-info .content #novel-summary div h2, #wrapper #novel-info .content #novel-summary div h3, #wrapper #novel-info .content #novel-summary div h4, #wrapper #novel-info .content #novel-summary div h5, #wrapper #novel-info .content #novel-summary div h6, #wrapper #novel-info .content #novel-summary div strong {
+  font-size: 1em;
+  color: inherit !important;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: block;
+}
+
+#wrapper #novel-info .content #novel-summary div p {
+  margin-bottom: 0.5em;
+}
+
+#wrapper #novel-info .content #novel-summary div:last-child {
+  margin-bottom: 0;
+}
+
+#wrapper #novel-info .content #chapter-preview {
+  margin: 0 1em;
+  padding-bottom: 100px;
+  min-height: 10px;
+  font-family: 'Lora', serif;
+  font-weight: 200;
+  font-size: 22px;
+  color: #000;
+}
+
+#wrapper #novel-info .content #chapter-preview .preview {
+  font-size: 22.4px;
+  line-height: 40px;
+  color: rgba(18, 18, 23, 0.6);
+  margin-bottom: 16px;
+  font-weight: 200;
+}
+
+#wrapper #novel-info .content #chapter-preview strong, #wrapper #novel-info .content #chapter-preview h1, #wrapper #novel-info .content #chapter-preview h2, #wrapper #novel-info .content #chapter-preview h3, #wrapper #novel-info .content #chapter-preview h4 {
+  font-size: 30px;
+  margin: 22.4px 0;
+  line-height: 40px;
+  color: #000;
+  font-weight: 200;
+}
+
+#wrapper #novel-info .content #chapter-preview p {
+  font-size: inherit;
+  margin: 25px 0;
+  line-height: 40px;
+  color: #1f2129;
+  font-weight: 200;
+}
+
+#wrapper ._open {
+  top: 0px !important;
+}
+
+.scroll {
+  overflow-y: scroll !important;
+  pointer-events: fill !important;
+}
+
+#provider-not-supported {
+  position: absolute;
+  height: calc(100% - 200px - 1em);
+  width: calc(60% - 2em);
+  top: 200px;
+  left: calc(50% - 30%);
+  background-color: #fff;
+  border-radius: 30px 30px 0 0;
+  font-size: 32px;
+  display: none;
+  padding: 1em;
+  padding-bottom: 0;
+  z-index: 100000;
+}
+
+#provider-not-supported .minor {
+  color: #000;
+  font-size: 0.8em;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-weight: 400;
+  margin: 0 auto;
+  width: 90%;
+  display: block;
+  margin-bottom: 0.4em;
+}
+
+#provider-not-supported .p-url {
+  width: calc(90% - 2em);
+  margin-left: 5%;
+  border-radius: 100px;
+  background-color: #1f2129;
+  padding: 5px 1em;
+  display: block;
+  float: left;
+  overflow: hidden;
+  text-overflow: clip;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  font-family: 'Inconsolata', monospace;
+  color: #141212;
+  font-size: 0.6em;
+  line-height: 1.25em;
+  color: #fff;
+  /*span{
+            display:block;
+            float:left;
+        }*/
+}
+
+#provider-not-supported .p-url .base {
+  color: #e00202;
+}
+
+#provider-not-supported .thanks {
+  width: calc(50% - 20px);
+  color: #fff;
+  background-color: #1f2129;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 5px 10px;
+  font-size: 0.5em;
+  opacity: 0;
+  border-radius: 6px;
+  display: block;
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+  z-index: 1000;
+}
+
+#provider-not-supported .thanks::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: calc(50% - 10px);
+  background-color: inherit;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: -8px;
+  z-index: -1;
+  border-radius: 3px 0 0 0;
+}
+
+#provider-not-supported #request-button {
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 100px;
+  text-align: center;
+  display: block;
+  min-width: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 7px 16px;
+  line-height: 16px;
+  height: calc(32px - 14px);
+  background: -webkit-gradient(linear, left top, right top, from(#5a196b), to(#771e8f));
+  background: linear-gradient(to right, #5a196b, #771e8f);
+  color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: top 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: top 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, top 0.3s ease;
+  transition: box-shadow 0.3s ease, top 0.3s ease, -webkit-box-shadow 0.3s ease;
+  z-index: 5;
+  margin: 0 auto;
+  margin-top: 150px;
+  font-size: 12px;
+}
+
+#provider-not-supported #request-button:hover {
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(90, 25, 107, 0.7);
+          box-shadow: 0px 0px 6px 3px rgba(90, 25, 107, 0.7);
+}
+
+#provider-not-supported #request-button .request, #provider-not-supported #request-button .requested {
+  display: block;
+  line-height: 16px;
+  text-align: center;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+#provider-not-supported #request-button .request svg, #provider-not-supported #request-button .requested svg {
+  color: inherit;
+  height: 12px;
+  width: 12px;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+#provider-not-supported #request-button .request .text, #provider-not-supported #request-button .requested .text {
+  font-size: 12px;
+  vertical-align: middle;
+  margin-left: 4px;
+  line-height: 16px;
+  color: inherit;
+}
+
+#provider-not-supported #request-button .request svg {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+#provider-not-supported #request-button .requested {
+  display: none;
+}
+
+.font2 {
+  font-family: "Merriweather",serif !important;
+}
+
+.font1 {
+  font-family: "Nunito Sans","SF Pro Text","SF Pro Icons","Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+@media only screen and (max-width: 820px) {
+  #load-time {
+    font-size: 12px;
+    left: -94px;
+    display: none;
+  }
+  #nav .major {
+    padding: 4px 0;
+  }
+  /*.major{
+        top:40px;
+    }*/
+  #loading-info {
+    width: 300px;
+    left: calc(50% - 150px);
+    height: 250px;
+    top: calc(50% - 125px);
+  }
+  #loading-info .minor {
+    font-size: 4vw;
+  }
+  #wrapper {
+    padding-right: 0;
+  }
+  #wrapper #read-button {
+    position: fixed;
+    width: 60%;
+    left: calc(50% - 30%);
+  }
+  #wrapper #novel-info {
+    font-size: 22px;
+    width: 95%;
+    margin: 0 2.5%;
+  }
+  #wrapper #novel-info .content .header .header-right {
+    margin-right: 3em;
+    max-height: 14em;
+  }
+  #wrapper #novel-info .content .header .header-right #novel-title {
+    margin-bottom: 0.1em;
+  }
+  #wrapper #novel-info .content .header .header-right #novel-author {
+    margin-bottom: 0.1em;
+  }
+  #wrapper #novel-info .content .header .header-right #novel-chapter-count {
+    margin-bottom: 0.1em;
+  }
+  #wrapper #novel-info .content .header .header-right #novel-tags h3 {
+    margin-bottom: 0.2em;
+  }
+  #wrapper #novel-info .content .header .header-right #novel-tags span {
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+  }
+  #wrapper #novel-info .content #chapter-preview {
+    font-size: 16px;
+  }
+  #wrapper #novel-info .content #chapter-preview .preview {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 12px;
+  }
+  #wrapper #novel-info .content #chapter-preview strong, #wrapper #novel-info .content #chapter-preview h1, #wrapper #novel-info .content #chapter-preview h2, #wrapper #novel-info .content #chapter-preview h3, #wrapper #novel-info .content #chapter-preview h4 {
+    font-size: 24px;
+    margin: 16px 0;
+    line-height: 28px;
+  }
+  #wrapper #novel-info .content #chapter-preview p {
+    font-size: 16px;
+    margin: 20px 0;
+    line-height: 28px;
+  }
+  #url-input {
+    left: calc(50% - 45%);
+    width: 90%;
+  }
+  #url-input:focus-within {
+    left: calc(50% - 45%);
+    width: 90%;
+  }
+  ._done {
+    left: calc(50% - 45%) !important;
+    width: 90% !important;
+  }
+  #provider-not-supported {
+    width: calc(95% - 2em);
+    left: 2.5%;
+  }
+  #provider-not-supported .p-url {
+    -webkit-line-clamp: 2;
+  }
+}
+
+/*.url-input{
+    //direction: rtl;
+    font-family: inherit;
+    width: calc(100% - 53px - 20px);
+    border: 0;
+    border-bottom: 2px solid #3c3e47;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    display: inline-block;
+    &::placeholder {
+        color: transparent;
+    }
+
+    &:placeholder-shown ~ .url-input-label {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 25px;
+    }
+}
+.url-input:focus{
+    //direction: ltr;
+    ~ .url-input-label {
+        position: absolute;
+        top: 5px;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: #83848f;
+        font-weight:700;    
+    }
+    padding-bottom: 6px;  
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right,#83848f,#e5e5e5);
+    border-image-slice: 1;
+}
+.url-input-label{
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #3c3e47;
+}
+.url-submit{
+    background: url("../p/cloud-download-alt-solid.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    outline: none;
+    height: 43px;
+    width: 53px;
+    margin: 0 10px;
+    float: right;
+    display: block;
+    border: none;
+    transition: filter 0.15s ease;
+    cursor: pointer;
+    &:hover{
+        filter: contrast(0.2);
+    }
+}
+.no-select{
+    user-select: none;
+}
+.novel-summary{
+    position: absolute;
+    width: calc(50% - 12px);
+    height: calc(30% - 12px);
+    min-width: 20px;
+    display: block;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid #3c3e47;
+    overflow-y: auto;
+
+    color: #83848f;
+    display: block;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+    font-size: 18px;
+    font-family: "Merriweather",serif;
+    padding: 6px;
+    //padding-top: 6px;
+    //margin-left: 50px;
+    > p{
+        //margin-top: 12px;
+        //padding: 0 6px;
+        font-family: "Merriweather",serif;
+        //display: inline;
+        word-break: break-word;
+        line-height: 1.8;
+        font-size: 16px;
+    }
+}
+.novel-cover{
+    border-top: 1px solid #3c3e47;
+    border-right: 1px solid #3c3e47;
+    background-image: url('../p/book-cover-placeholder.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 30vh;
+    max-height: 50%;
+    width: 20vh;
+    left: 0;
+    bottom: 30%;
+}
+.novel-title{
+    position: absolute;
+    width: calc(50% - 20vh - 40px);
+    height: 20px;
+    left: 20vh;
+    bottom: calc(30% + 30vh - 30px);
+    margin: 0 20px;
+    color: #e5e5e5;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.novel-author{
+    position: absolute;
+    width: calc(50% - 20vh - 40px);
+    height: 20px;
+    left: 20vh;
+    bottom: calc(30% + 30vh - 30px - 30px);
+    margin: 0 20px;
+    color: #e5e5e5;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.novel-genres{
+    position: absolute;
+    width: calc(50% - 20vh - 40px);
+    height: 20px;
+    left: 20vh;
+    bottom: calc(30% + 30vh - 30px - 30px - 30px);
+    margin: 0 20px;
+    color: #e5e5e5;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.novel-chapter-count{
+    position: absolute;
+    width: calc(50% - 20vh - 40px);
+    height: 20px;
+    left: 20vh;
+    bottom: calc(30% + 30vh - 30px - 30px - 30px - 30px);
+    margin: 0 20px;
+    color: #e5e5e5;
+    font-size: 20px;
+}
+#read-novel{
+    position: absolute;
+    width: calc(40% - 20vh);
+    height: 40px;
+    left: 20vh;
+    bottom: calc(30% + 5vh);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #3c3e47;
+    margin: 0 5%;
+    color: #1f2129;
+    font-weight: 700;
+    font-size: 20px;
+    
+}*/
+/*# sourceMappingURL=addnovel.css.map */

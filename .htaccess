@@ -1,0 +1,12 @@
+
+# HTID:16281981: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:16281981:
+RewriteEngine On
+ RewriteCond %{HTTP_HOST} !^www\.
+ RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteRule ^([^\.]+)$ $1.html [NC,L]

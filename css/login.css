@@ -1,0 +1,55 @@
+#login {
+  height: calc(100% - 400px);
+  overflow: hidden;
+  width: 600px;
+  position: absolute;
+  left: calc(50% - 300px);
+  bottom: calc(100% + 5px);
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  z-index: 1000;
+  font-size: 32px;
+}
+
+#login .minor {
+  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.7em;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+  margin-top: 100px;
+}
+
+#login .g-signin2 {
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 150px;
+  display: block;
+}
+
+#login-bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 999;
+  background-color: rgba(136, 136, 136, 0.3);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+
+@media only screen and (max-width: 820px) {
+  #login {
+    width: 90%;
+    left: 5%;
+  }
+  #login .g-signin2 {
+    margin-top: 50px;
+  }
+}
+/*# sourceMappingURL=login.css.map */

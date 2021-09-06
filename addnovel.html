@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, nofollow">
+    <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' >
+    <meta name="description" content="NovelKeeper supports tens of online sites to grab novels from. Just copy the url and you're good to go." />
+
+    <meta name="twitter:title" content="NovelKeeper.com">
+    <meta name="twitter:description" content="NovelKeeper is the ultimate library for online novels. Simply add a novel and start reading.">
+    <meta name="twitter:site" content="@JRamberger">
+    <meta name="twitter:creator" content="@JRamberger">
+
+    <meta property="og:type" content="add" />
+    <meta property="og:title" content="NovelKeeper.com" />
+    <meta property="og:description" content="NovelKeeper is the ultimate library for online novels. Simply add a novel and start reading." />
+    <meta property="og:url" content="https://www.NovelKeeper.com" />
+    <meta property="og:site_name" content="NovelKeeper" />
+
+    <meta name="google-signin-client_id" content="379515550700-snr2qgaikmu3bgfo3a6dsrvmk9uitiv4.apps.googleusercontent.com">
+    <title>Add Novel</title>
+
+    <!--load all stylesheets-->
+    <link rel="stylesheet" type="text/css" href="css/logo.css">
+    <link rel="stylesheet" type="text/css" href="css/addnovel.css">
+    <link rel="stylesheet" type="text/css" href="css/notifications.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/loader.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,500,600,700" data-ignore="true">
+    <link data-ignore="true" href="https://fonts.googleapis.com/css?family=Merriweather:700,400,400i" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="nav">
+        <a class="nav-logo-addnovel" href="/">
+            <svg
+                xmlns="http://www.w3.org/2000/svg" width="296.71" height="148" viewBox="0 0 296.71 148">
+                <polygon points="0.5 70.5 0.5 147.5 77.5 147.5 0.5 70.5" fill="currentColor"/>
+                <polygon points="109.21 146.5 1 38.29 1 1 39.29 1 147 108.71 147 146.5 109.21 146.5" fill="currentColor"/>
+                <!--<path d="M587.09,284.5,694.5,391.91V429H657.41L549.5,321.09V284.5h37.59m.41-1h-39v38L657,430h38.5V391.5l-108-108Z" transform="translate(-548 -283)"/>-->
+                <path d="M695.5,283.5h-74l147,147h74l-73-73,74-74h-76l-36,36Z" transform="translate(-548 -283)" fill="currentColor"/>
+            </svg>
+        </a>
+        <h1 class="major">Add Novel</h1>
+        
+
+        <a class="library" href="library">library</a>
+        <a class="restart" href="addnovel">restart</a>
+    </div>
+
+    <h6 id="load-time">load time .s/....ms</h6>
+    <span id="login" data-type="onaction">
+        <h2 class="minor">You must be logged in to use this action.</h2>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </span>
+    <span id="login-bg"></span>
+
+    <!--<h1 class="major">Add a Novel</h1>-->
+    
+
+    <span id="loading-info">
+        <h3 class="minor">We're gathering the info for your novel.</h3>
+        <div class="loadingio-eclipse loader">
+            <div class="ldio-rpinwye8j0b">
+                <div>
+                </div>
+            </div>
+        </div>
+    </span>
+    <!--<div id="library-buttons" class="_off">
+        <a id="library-button" class="font1" href="#">
+            <span class="add">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/></svg>
+                <span class="text">
+                    ADD TO LIBRARY
+                </span>
+            </span>
+            <span class="remove">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z"/></svg>
+                <span class="text">
+                    IN LIBRARY
+                </span>
+            </span>
+        </a>
+        <a id="navigate-library" class="font1" href="library">
+            <span class="add">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg>
+                <span class="text">
+                    LIBRARY
+                </span>
+            </span>
+        </a>
+    </div>-->
+
+    <div id="wrapper">
+        <span class="notif">test notif</span>
+
+
+        <span id="url-input" class="nk-input">
+            <input type="url" placeholder="url" title="url" name="novel-url-input" spellcheck="false">
+            <label class="nk-placeholder" for="novel-url-input">url</label>
+            <a class="nk-button" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M24 12l-9-9v7h-15v4h15v7z"/></svg>
+            </a>
+        </span>
+        <!--<a id="read-button" href="#">
+            <h2>Read</h2>
+        </a>-->
+        <div id="novel-info">
+            <div class="actions">
+                <span class="display">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                </span>
+                <span class="options">
+                    <span class="but copy">
+                        copy novel url
+                    </span>
+                    <a class="but download">
+                        download
+                    </a>
+                    <span class="but add require-login">
+                        add to library
+                    </span>
+                    <a class="but read">
+                        read
+                    </a>
+                </span>
+            </div>
+            <!--all novel info goes here-->
+            <div class="content">
+                <!--<a id="add-to-library" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/></svg>
+                </a>-->
+                <div class="header">
+                    <div id="novel-cover">
+                        <img>
+                    </div>
+                    <div class="header-right">
+                        <h1 id="novel-title"></h1>
+                        <h2 id="novel-author"></h1>
+                        <h3 id="novel-chapter-count"><span id="novel-missing-chaps">?</span></h3>
+                        <span id="novel-tags">
+                            <h3>Tags</h3>
+                            <span></span>
+                        </span>
+                    </div>
+                </div>
+                <div id="novel-summary">
+                    <h3>Summary</h3>
+                    <div>
+                        <!--novel summary goes in here-->
+                    </div>
+                </div>
+                <div id="chapter-preview">
+                    <h2 class="preview">Chapter Preview</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="provider-not-supported">
+        <h1 class="minor">Provider Not Supported</h1>
+        <p class="p-url">
+            
+        </p>
+        <a id="request-button" class="font1" href="#">
+            <span class="request">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M17.428 5h-17.428l6.616 7-6.616 7h17.428l6.572-7z"/></svg>
+                <span class="text">
+                    REQUEST PROVIDER
+                </span>
+            </span>
+            <span class="requested">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z"/></svg>
+                <span class="text">
+                    REQUESTED
+                </span>
+            </span>
+        </a>
+        <span class="thanks font1">Thanks for helping to make our website better!</span>
+    </div>
+
+    <!--load all scripts-->
+    <script src="js/000webhost.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+        crossorigin="anonymous"></script>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script src="js/cookies.js"></script>
+    <script src="js/notification_manager.js"></script>
+    <script src="js/AJAX.js"></script>
+    <script src="js/user_data.js"></script>
+    <script src="js/login_onload.js"></script>
+    <script src="js/grabber.js"></script>
+    <script src="js/addnovel_onload.js"></script>
+</body>
+</html>

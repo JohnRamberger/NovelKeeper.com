@@ -1,0 +1,115 @@
+:root{
+    --transition-time: 0.3s;
+}
+    
+#notification-manager{
+    position: fixed;
+    //border: 1px solid white;
+    height: 300px;
+    width: calc(400px - 60px);
+    padding: 0 30px;
+    //padding-bottom: 30px;
+    bottom:0;
+    left: 0;
+    overflow: hidden;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+    .notification{
+        position: absolute;
+        height:60px;
+        width: calc(100% - 60px);
+        //border: 1px dashed red;
+        border-radius: 5px;
+        bottom: 30px;
+        left: 30px;
+        transition: bottom var(--transition-time) ease, left var(--transition-time) ease, filter var(--transition-time) ease;
+        background-color: #1f2129;
+        border:1px solid #3c3e47;
+        display: block;
+        pointer-events: auto;
+        &:first-child{
+            bottom: 30px;
+            animation: var(--transition-time) ease-out 0s 1 slideInFromLeft;
+        }
+        &:nth-child(2){
+            bottom: 120px;
+            //background-color: yellow;
+        }
+        &:nth-child(3){
+            bottom: 210px;
+            //background-color: yellow;
+            filter: opacity(0.3);
+        }
+        &:nth-child(4){
+            bottom: 330px;
+            //background-color: yellow;
+        }
+        &:nth-child(n + 5){
+            display: none;
+        }
+        .icon{
+            height: 60px;
+            width:60px;
+            //border:1px solid red;
+            display:block;
+            position: absolute;
+            svg{
+                color:inherit;
+                height:40px;
+                width:40px;
+                display:block;
+                margin:10px;
+            }
+        }
+        h1{
+            font-size:20px;
+            display: block;
+            text-align: left;
+            width:75%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-right:10%;
+            margin-left:60px;
+            margin-top: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+        }
+        .close{
+            height: 20px;
+            width: 20px;
+            position:absolute;
+            top:0;
+            right:0;
+            //border:1px solid red;
+            cursor: pointer;
+            svg{
+                color: #83848f;
+                height:12px;
+                width:12px;
+                display:block;
+                margin:4px;
+            }
+        }
+    }
+    .success{
+        color: #2ecc71;
+    }
+    
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    #notification-manager{
+        display: none;
+    }
+}

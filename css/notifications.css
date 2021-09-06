@@ -1,0 +1,140 @@
+:root {
+  --transition-time: 0.3s;
+}
+
+#notification-manager {
+  position: fixed;
+  height: 300px;
+  width: calc(400px - 60px);
+  padding: 0 30px;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  display: block;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#notification-manager .notification {
+  position: absolute;
+  height: 60px;
+  width: calc(100% - 60px);
+  border-radius: 5px;
+  bottom: 30px;
+  left: 30px;
+  -webkit-transition: bottom var(--transition-time) ease, left var(--transition-time) ease, -webkit-filter var(--transition-time) ease;
+  transition: bottom var(--transition-time) ease, left var(--transition-time) ease, -webkit-filter var(--transition-time) ease;
+  transition: bottom var(--transition-time) ease, left var(--transition-time) ease, filter var(--transition-time) ease;
+  transition: bottom var(--transition-time) ease, left var(--transition-time) ease, filter var(--transition-time) ease, -webkit-filter var(--transition-time) ease;
+  background-color: #1f2129;
+  border: 1px solid #3c3e47;
+  display: block;
+  pointer-events: auto;
+}
+
+#notification-manager .notification:first-child {
+  bottom: 30px;
+  -webkit-animation: var(--transition-time) ease-out 0s 1 slideInFromLeft;
+          animation: var(--transition-time) ease-out 0s 1 slideInFromLeft;
+}
+
+#notification-manager .notification:nth-child(2) {
+  bottom: 120px;
+}
+
+#notification-manager .notification:nth-child(3) {
+  bottom: 210px;
+  -webkit-filter: opacity(0.3);
+          filter: opacity(0.3);
+}
+
+#notification-manager .notification:nth-child(4) {
+  bottom: 330px;
+}
+
+#notification-manager .notification:nth-child(n + 5) {
+  display: none;
+}
+
+#notification-manager .notification .icon {
+  height: 60px;
+  width: 60px;
+  display: block;
+  position: absolute;
+}
+
+#notification-manager .notification .icon svg {
+  color: inherit;
+  height: 40px;
+  width: 40px;
+  display: block;
+  margin: 10px;
+}
+
+#notification-manager .notification h1 {
+  font-size: 20px;
+  display: block;
+  text-align: left;
+  width: 75%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10%;
+  margin-left: 60px;
+  margin-top: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+#notification-manager .notification .close {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+#notification-manager .notification .close svg {
+  color: #83848f;
+  height: 12px;
+  width: 12px;
+  display: block;
+  margin: 4px;
+}
+
+#notification-manager .success {
+  color: #2ecc71;
+}
+
+@-webkit-keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  #notification-manager {
+    display: none;
+  }
+}
+/*# sourceMappingURL=notifications.css.map */
